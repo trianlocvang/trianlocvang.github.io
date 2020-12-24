@@ -4,6 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VINASUN - Tra cứu mã dự thưởng</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap4.min.css">
+  <link rel="stylesheet" href="../style.css">
   <title>VINASUN TAXI </title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -78,78 +84,48 @@
   </div>
 
   <div class="bg-dv">
-    <div class="col-xl-4 col-md-12 col-xs-12 p-0 float-left mobile-tracuu">
-      <img src="images/tra-cuu-lxtt.jpg" class="img-fluid" alt="" />
-      <div class="row">
-        <div class="col-6">
-          <a href="https://vns-laixetranhtai.github.io/tuan1/" target="_blank" class="week"> Tuần 01 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan2/" target="_blank" class="week"> Tuần 02 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan3/" target="_blank" class="week"> Tuần 03 - <span>Tại
-          đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan4/" target="_blank" class="week"> Tuần 04 - <span>Tại
-          đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan5/" target="_blank" class="week"> Tuần 05 - <span>Tại
-          đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan6/" target="_blank" class="week"> Tuần 06 - <span>Tại
-          đây</span></a>
+    
+    <div class="container h-100 mt-3 mb-3">
+    <div class="row h-100 justify-content-center">
+      <div class="col">
+        <div class="card shadow">
+          <div class="card-header">
+            <h5 id="title">
+              <!-- <span class="d-none d-lg-inline">Điểm môn học</span> -->
+              <span id="subj" class="text-primary"></span>
+              <span id="class" class="text-danger"></span>
+              <span id="lecturer" class="d-none d-lg-inline float-right text-muted"></span>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-primary" role="alert">
+              Nhập <b>Số điện thoại</b> vào ô <b>Tìm kiếm</b> để tra cứu.
+            </div>
+            <div class="table-responsive">
+              <table id="myTable" class="table table-bordered table-hover"></table>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <span class="d-inline d-sm-none">VINASUN.</span>
+            <span class="d-none d-sm-inline">Copyright © 2019 Cty CP Ánh Dương Việt Nam.</span>
+            <span class="float-right font-italic font-weight-light">
+              Cập nhật ngày
+              <span id="lastUpdate"></span>
+            </span>
+          </div>
         </div>
-
-        <div class="col-6">
-          <a href="https://vns-laixetranhtai.github.io/tuan7/" target="_blank" class="week"> Tuần 07 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan8/" target="_blank" class="week"> Tuần 08 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan9/" target="_blank" class="week"> Tuần 09 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan10/" target="_blank" class="week"> Tuần 10 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan11/" target="_blank" class="week"> Tuần 11 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan12/" target="_blank" class="week"> Tuần 12 - <span>Tại
-              đây</span></a>
-        </div>
-      
-          <!--<a href="https://vns-laixetranhtai.github.io/tuan1/" target="_blank" class="week"> Tuần 01 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan2/" target="_blank" class="week"> Tuần 02 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan3/" target="_blank" class="week"> Tuần 03 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan4/" target="_blank" class="week"> Tuần 04 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan5/" target="_blank" class="week"> Tuần 05 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan6/" target="_blank" class="week"> Tuần 06 - <span>Tại
-              đây</span></a>
-        </div>
-        <div class="col-6">
-          <a href="https://vns-laixetranhtai.github.io/tuan7/" target="_blank" class="week"> Tuần 07 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan8/" target="_blank" class="week"> Tuần 08 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan9/" target="_blank" class="week"> Tuần 09 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan10/" target="_blank" class="week"> Tuần 10 - <span>Tại
-              đây</span></a>
-          <a href="https://vns-laixetranhtai.github.io/tuan11/" target="_blank" class="week"> Tuần 11 - <span>Tại
-              đây</span></a>
-           <a href="https://vns-laixetranhtai.github.io/tuan12/" target="_blank" class="week"> Tuần 12 - <span>Tại
-              đây</span></a>             
-          -->
       </div>
     </div>
-    <div class="col-xl-4 col-md-12 col-xs-12 float-left p-0">
-      <a href="http://www.vinasuntaxi.com/ket-qua-hang-tuan-cuoc-thi-lai-xe-tranh-tai-xe-hop-trao-tay-dot-2" target="_blank">
-        <img src="images/ket-qua-lxtt.jpg" class="img-fluid" alt="" />
-      </a>
-    </div>
-    <div class="col-xl-4 col-md-12 col-xs-12 float-left p-0">
-      <a href="http://www.vinasuntaxi.com/tong-hop-thong-tin-ve-chuong-trinh-lai-xe-tranh-tai-xe-hop-trao-tay-dot-2" target="_blank">
-        <img src="images/thong-tin-lxtt.jpg" class="img-fluid" alt="" />
-      </a>
-    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+  <script src="app.js?v=1.5"></script>
+
     <div class="float-left w-100 copyright">
       <div class="float-left">@ 2020 VINASUN TAXI. All Rights Reserved.</div>
       <div class="float-right">Trụ sở: <strong>Vinasun Tower </strong>648 Nguyễn Trãi, Phường 11, Quận 5, Thành phố Hồ
