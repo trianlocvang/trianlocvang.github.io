@@ -1,5 +1,5 @@
-var DATA_PATH = 'data.json?v=0.3';
-var DEFAULT_SEARCH_TERM = 'Nhập Số điện thoại tại đây';
+var DATA_PATH = 'data.json?v=1.5';
+var DEFAULT_SEARCH_TERM = 'Nhập mã nhân viên tại đây';
 
 var getLangConfig = function () {
   return {
